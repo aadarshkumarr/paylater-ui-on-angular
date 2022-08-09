@@ -1,0 +1,156 @@
+<ng-template #investInsure>
+    <mat-dialog-content class="mat-typography">
+        <div class="apply-card-popup" fxLayoutAlign="center center" fxLayout="column">
+          <div class="img-wrap m-b-20">
+            <img src="./assets/images/bank.png" alt="bank" width="80px" />
+          </div>
+          <h2>Thanks for applying</h2>
+         
+          <p class="text-center m-b-40">Your request has been<br> received. Our team will connect with you shortly.</p>    
+      
+            <a class="btn-primary plr-30" [mat-dialog-close]="true" cdkFocusInitial >Okay</a>
+         
+        </div>
+     </mat-dialog-content>
+    
+    
+    
+</ng-template>
+<div class="container-fluid">
+    <div class="content mt-3">
+        <div >
+            <div>
+                <strong class="txt-18">Manage Account</strong>
+                <p>Next Payment due on <strong>Sep 03, 2021</strong></p>
+            </div>
+            <div>
+                <mat-card>
+                    <div class="m-b-10" fxLayoutAlign="space-between center">
+                        <div fxLayout="column" fxLayoutAlign="start center">
+                            <label>Your limit</label>
+                            <strong>₹ {{this.service.journyInfo.eligiblityWithKYCorWithoutKyc=='With Limited KYC'?'5,000':'60,000'}}</strong>
+                        </div>
+                        <div fxLayout="column">
+                            <label>Total Outstanding</label>
+                            <strong>₹ 594</strong>
+                        </div>
+                    </div>
+                    <div>
+                        <div fxLayout="column" fxLayoutAlign="start start">
+                            <label>Total Due Limit</label>
+                            <strong>₹ 0</strong>
+                        </div>
+                    </div>
+    
+                    <div class="m-t-10" *ngIf="!this.service.journyInfo.convertToCreditCard">
+                        <a  (click)="converToCreditCard()" class="convert-btn txt-16">Convert to Credit Card</a>
+
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+
+        <div class="">
+            <mat-tab-group mat-align-tabs="start">
+                <mat-tab label="Transact">
+                    <div fxLayout="column" fxLayoutAlign="start center">
+                        <div class="w-100p">
+                            <mat-card class="m-t-20">
+                                <div fxLayoutAlign="space-between center">
+                                    <span>Raise a fraud dispute</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#255bd7"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                                </div>
+                            </mat-card>
+                        </div>
+                        
+                        <div class="w-100p">
+                            <mat-card class="">
+                                <div fxLayoutAlign="space-between center">
+                                    <span>Manage Credit Limit</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#255bd7"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                                </div>
+                            </mat-card>
+                        </div>
+                        <div class="w-100p">
+                            <mat-card class="">
+                                <div fxLayoutAlign="space-between center">
+                                    <span>Set per - transaction Limit</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#255bd7"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                                </div>
+                            </mat-card>
+                        </div>
+                        <div class="w-100p">
+                            <mat-card class="">
+                                <div fxLayoutAlign="space-between center">
+                                    <span>Convert to EMI</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#255bd7"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                                </div>
+                            </mat-card>
+                        </div>
+                        <div class="w-100p">
+                            <mat-card class="">
+                                <div fxLayoutAlign="space-between center">
+                                    <span>Block Account</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#255bd7"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Invest & Insure">
+                    <div fxLayout="column" fxLayoutAlign="start center" (click)="openModal(investInsure)">
+                        <div class="w-100p">
+                            <mat-card class="m-t-20">
+                                <div fxLayoutAlign="space-between center">
+                                    <span>Insta Fixed Deposit</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#255bd7"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                                </div>
+                            </mat-card>
+                        </div>
+                        <div class="w-100p">
+                            <mat-card class="">
+                                <div fxLayoutAlign="space-between center">
+                                    <span>Open a Savings Account</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#255bd7"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                                </div>
+                            </mat-card>
+                        </div>
+                        <div class="w-100p">
+                            <mat-card class="">
+                                <div fxLayoutAlign="space-between center">
+                                    <span>Open a Current Account</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#255bd7"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                                </div>
+                            </mat-card>
+                        </div>
+                        <div class="w-100p">
+                            <mat-card class="">
+                                <div fxLayoutAlign="space-between center">
+                                    <span>Set per - transaction Limit</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#255bd7"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                                </div>
+                            </mat-card>
+                        </div>
+                        <div class="w-100p">
+                            <mat-card class="">
+                                <div fxLayoutAlign="space-between center">
+                                    <span> Insta term Life Insurance</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#255bd7"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                                </div>
+                            </mat-card>
+                        </div>
+                        <div class="w-100p">
+                            <mat-card class="">
+                                <div fxLayoutAlign="space-between center">
+                                    <span>Health / Motor Cover</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#255bd7"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </mat-tab>
+              </mat-tab-group>
+        </div>
+        
+    </div>
+</div>

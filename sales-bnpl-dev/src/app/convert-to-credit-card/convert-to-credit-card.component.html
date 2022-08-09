@@ -1,0 +1,130 @@
+<!-- <ng-template #thnakYou_message>
+    <mat-icon class="close-icon" color="dark" mat-dialog-close>close</mat-icon>
+    <h2 mat-dialog-title class="mb-0">Title</h2> 
+    <h4>Thanks for applying <br> for credit card!</h4>
+    <mat-dialog-content class="mat-typography">
+       <div class="row">
+           Your credit card will be delivered<br>to you within 4-5 days once the <br> approval has been recived      </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+     
+      <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="acceptAndProceed()">Okay</button>
+
+    </mat-dialog-actions>
+    
+</ng-template> -->
+
+<div class="container-fluid">
+    <div class="content mt-3">
+        <form autocomplete="off" [formGroup]="creditCard" (ngSubmit)="creditCardSubmit()">
+
+        <div fxLayout="column" fxLayoutAlign="center start">
+            <strong class="txt-18">Convert to Credit Card</strong>
+            <p class="width-70p">Give us a few details to get the process started!</p>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center center">   
+            <div class="w-100p">
+                <mat-card>
+                    <div class="m-b-10">
+                        <strong>Aadhar Card</strong>
+                    </div>
+                    <div class="m-b-20">
+                        <span>Upload in Pdf, jpeg or png format and under 2MB</span>
+                    </div>
+                    <div fxLayoutAlign="space-around center">
+                        <div>
+                            <button type="button" class="btn-border " (click)="uploadAadhar.click()">
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#0566ff">
+                                    <g><rect fill="none" height="24" width="24"/></g>
+                                    <g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M7,9l1.41,1.41L11,7.83V16h2V7.83l2.59,2.58L17,9l-5-5L7,9z"/></g></svg>
+                                Upload
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn-border" (click)="uploadAadhar.click()">
+                                <svg class="m-r-10" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#0566ff">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M21 6h-3.17L16 4h-6v2h5.12l1.83 2H21v12H5v-9H3v9c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM8 14c0 2.76 2.24 5 5 5s5-2.24 5-5-2.24-5-5-5-5 2.24-5 5zm5-3c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3zM5 6h3V4H5V1H3v3H0v2h3v3h2z"/>
+                                </svg>
+                                Capture
+                            </button>
+                        </div>
+                        <input type="file" #uploadAadhar accept="application/pdf,image/gif,image/jpeg,image/png" (change)="fileChange($event,'uploadAadhar')" id="FileUpload1" style="display: none" />
+
+                    </div>
+                    <p class="m-t-20 image-name" fxLayoutAlign="start center" *ngIf="uploadAadharProof">{{uploadAadharProof}}
+                        <svg class="m-l-10" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#318908">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2
+                             12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </p>
+
+
+                </mat-card>
+            </div>
+            <div class="m-t-20 w-100p">
+                <mat-form-field class="w-100p" appearance="outline">
+                    <mat-label>Your VOTER ID</mat-label>
+                    <input type="tel" matInput placeholder="Enter Your VOTER ID" formControlName="voterId">
+                </mat-form-field>
+            </div>
+           
+            <div class="w-100p">
+                <mat-card>
+                    <div class="m-b-10">
+                        <strong>{{documentType}}</strong>
+                    </div>
+                    <div class="m-b-20">
+                        <span>Upload in Pdf, jpeg or png format and under 2MB</span>
+                    </div>
+                    <div fxLayoutAlign="space-around center">
+                        <div>
+                            <button type="button" class="btn-border " (click)="uploadIncome.click()">
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#0566ff">
+                                    <g><rect fill="none" height="24" width="24"/></g>
+                                    <g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M7,9l1.41,1.41L11,7.83V16h2V7.83l2.59,2.58L17,9l-5-5L7,9z"/></g></svg>
+                                Upload
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn-border" (click)="uploadIncome.click()">
+                                <svg class="m-r-10" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#0566ff">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M21 6h-3.17L16 4h-6v2h5.12l1.83 2H21v12H5v-9H3v9c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM8 14c0 2.76 2.24 5 5 5s5-2.24 5-5-2.24-5-5-5-5 2.24-5 5zm5-3c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3zM5 6h3V4H5V1H3v3H0v2h3v3h2z"/>
+                                </svg>
+                                Capture
+                            </button>
+                        </div>
+                        <input type="file" #uploadIncome accept="application/pdf,image/gif,image/jpeg,image/png" (change)="fileChange($event,'uploadIncome')" id="FileUpload1" style="display: none" />
+
+                    </div>
+
+
+                    <p class="m-t-20 image-name" fxLayoutAlign="start center" *ngIf="uploadIncomeProof">{{uploadIncomeProof}}
+                        <svg class="m-l-10" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#318908">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2
+                             12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </p>
+                    
+
+                </mat-card>
+                <!-- <mat-card>
+                    <div fxLayoutAlign="space-between center">
+                        <span>ITR</span>
+                        <mat-checkbox class="" value="true"  formControlName="itr"> </mat-checkbox>
+                    </div>
+                </mat-card> -->
+            </div>
+        </div>
+        <div class="mb-4 m-t-20" fxLayoutAlign="center center">
+            <button [disabled]="!creditCard.valid" class="btn-primary width-300 txt-18">Proceed</button>
+        </div>
+        
+
+</form>
+
+    </div>
+</div>

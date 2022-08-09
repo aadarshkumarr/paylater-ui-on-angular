@@ -1,0 +1,89 @@
+<div class="container-fluid">
+    <div class="content p-b-20" fxLayout="column" fxLayoutAlign="space-between center">
+        <form  class="w-100p" autocomplete="off" [formGroup]="checkEligibilety" (ngSubmit)="eligiblitySubmit()">
+        <div class="mt-5 w-100p m-b-40" fxLayout="column" fxLayoutAlign="center center">
+            <div class="m-b-20" fxLayoutAlign="center center">
+                <strong class="txt-18">Let's check your Eligibility limit </strong>
+            </div>
+    
+    
+            <div class="w-100p" >
+                <mat-form-field class="w-100p" appearance="outline">
+                    <mat-label>Enter PAN</mat-label>
+                    <input type="text" #input oninput="this.value = this.value.toUpperCase()" maxlength="10" matInput placeholder="Enter Your PAN" formControlName="pan">
+                </mat-form-field>
+            </div>
+    
+           
+            <div class="w-100p">
+                <mat-form-field class="w-100p" appearance="outline">
+                    <mat-label>Email ID</mat-label>
+                    <input type="email" matInput placeholder="Enter Your Email" formControlName="email">
+                </mat-form-field>
+            </div>
+            <div class="w-100p">
+                <mat-form-field class="w-100p" appearance="outline">
+                    <mat-label>Gender</mat-label>
+                    <mat-select name="" disableOptionCentering formControlName="gender">
+                        <mat-option value="male">Male</mat-option>
+                        <mat-option value="female">Female</mat-option>
+                        <mat-option value="other">Other</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="w-100p">
+                <mat-form-field class="w-100p" appearance="outline">
+                    <mat-label>Salaried</mat-label>
+                    <mat-select name="" disableOptionCentering formControlName="salaried" #salaried>
+                        <mat-option value="Not Salaried">Not Salaried</mat-option>
+                        <mat-option value="Salaried">Salaried</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="w-100p" *ngIf="incomeLabel">
+                <mat-form-field class="w-100p" appearance="outline">
+                   
+                        <mat-label>{{incomeLabel}}</mat-label>
+                        <input type="text" matInput placeholder="Enter Your Income" formControlName="income">
+                    </mat-form-field>
+                 
+            </div>
+            <div class="w-100p p-b-25">
+                <p class="">Do you have any Credit Card ?</p>
+                <mat-radio-group formControlName="creditCard">
+                  <mat-radio-button class="m-r-10" value="yes">Yes</mat-radio-button>
+                  <mat-radio-button class="example-margin" value="no">No</mat-radio-button>
+                </mat-radio-group>
+            </div>
+
+            <div class="w-100p" *ngIf="doYouHaveCrad">
+                <mat-form-field class="w-100p" appearance="outline">
+                    <mat-label>Bank Name</mat-label>
+                    <mat-select name="" disableOptionCentering formControlName="bank">
+                        <mat-option value="HDFC">HDFC</mat-option>
+                        <mat-option value="ICICI">ICICI</mat-option>
+                        <mat-option value="SBI">SBI</mat-option>
+                        <mat-option value="Axis">Axis</mat-option>
+                        <mat-option value="Kotak Mahindra">Kotak Mahindra</mat-option>
+
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+
+            <div class="w-100p" *ngIf="doYouHaveCrad">
+                <mat-form-field class="w-100p" appearance="outline">
+                    <mat-label>Credit Card Variant</mat-label>
+                    <mat-select name="" disableOptionCentering formControlName="cardType">
+                        <mat-option value="Silver">Silver</mat-option>
+                        <mat-option value="Gold">Gold</mat-option>
+                        <mat-option value="Platinum">Platinum</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="mb-4" fxLayoutAlign="center center">
+            <button class="btn-primary width-300 txt-18" type="submit" [disabled]="!checkEligibilety.valid">Check Limit</button>
+        </div>
+    </form>
+    </div>
+</div>

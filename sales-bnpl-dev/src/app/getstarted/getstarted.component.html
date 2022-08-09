@@ -1,0 +1,50 @@
+<div class="content">
+    <img class="w-100p" src="../../assets/images/e-com.png">
+
+    <!-- <map id="" name="image-map">
+        <area shape="rect" alt="e-com" title="e-com" coords="16,493,237,519" href="www.google.com" target="_blank" />
+        <area shape="default" nohref alt="" />
+    </map>  -->
+
+    <div class="buy-now" (click)="openBottomSheet(bottom_sheet_ecom)">
+        <span >Buy now</span>
+    </div>
+</div>
+
+
+<ng-template #bottom_sheet_ecom>
+
+    <div class="bottomsheet-wrap">
+        <h4>Pay with</h4>
+        <div class="payment-method m-b-20">
+            <div class="pay-type" fxLayoutAlign="start center">
+                <mat-radio-button class="m-r-10" value=""> </mat-radio-button>
+                <span>Net Banking</span>
+            </div>
+            <div class="pay-type" fxLayoutAlign="start center">
+                <mat-radio-button class="m-r-10" value=""> </mat-radio-button>
+                <span>Pay on Delivery</span>
+            </div>
+            <div class="pay-type" fxLayoutAlign="start center">
+                <mat-radio-button class="m-r-10" value=""> </mat-radio-button>
+                <span>Debit/Credit Card</span>
+            </div>
+            <div class="pay-type" fxLayoutAlign="start center">
+                <mat-radio-button class="m-r-10" value=""> </mat-radio-button>
+                <span>Buy Now, Pay Later. 
+                    <strong class="m-l-20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12.042" height="11.848" viewBox="0 0 12.042 11.848">
+                            <path d="M10.833 4.921v.5A5.417 5.417 0 1 1 7.621.469" transform="translate(.501 .506)" style="fill:none;stroke:#318908;stroke-linecap:round;stroke-linejoin:round"/>
+                            <path data-name="Vector" d="M7.042 0 1.625 5.422 0 3.8" transform="translate(4.293 1.593)" style="fill:none;stroke:#318908;stroke-linecap:round;stroke-linejoin:round"/>
+                        </svg>
+                        Linked
+                    </strong> 
+                </span>
+            </div>
+        </div>
+       <div class="yellow-btn">
+            <a>Make Payment</a>
+       </div>
+    </div>
+   
+</ng-template>

@@ -1,0 +1,23 @@
+svg {
+    width: 200px;
+    height: 200px;
+}
+
+.circle-bar .main-circle {
+    display: flex;
+    justify-content: center;
+}
+.circle-bar p {
+    text-align: center;
+    font-size: 12px;
+    color: red;
+    font-weight: 600;
+    margin: 0 0 33px;
+}
+.circle-prog {
+    max-width: 156px;
+}
+tspan {
+    font-size: 90px;
+    font-weight: 800;
+}

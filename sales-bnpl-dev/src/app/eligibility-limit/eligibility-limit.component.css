@@ -1,0 +1,11 @@
+.success-popup {
+    margin-top: 100px;
+}
+.congrats-msg {
+    font-size: 18px;
+    color: #434343;
+    font-weight: 500;
+}
+.congrats-msg .link {
+    font-size: 22px;
+}

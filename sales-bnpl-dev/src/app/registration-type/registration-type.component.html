@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="content registraion-type" fxLayout="column" fxLayoutAlign="space-between center">
+        <form class="w-100p" autocomplete="off" [formGroup]="registration" (ngSubmit)="registrationTypeSubmit()">
+        <div class="mt-5" fxLayout="column" fxLayoutAlign="center center"> 
+            <div class="m-b-20" fxLayoutAlign="center center">
+                <strong class="txt-18">Do you want to Register....</strong>
+            </div>
+            <mat-radio-group class="w-100p" formControlName="registraionType">
+            <div fxLayoutAlign="start center">
+                <mat-card class="m-b-10" [ngClass]="{'disabled':registerType=='With Full KYC'}">
+                    <div fxLayoutAlign="space-between center">
+                        <span>With Limited KYC</span>
+                        <mat-radio-button class="" value="With Limited KYC"  > </mat-radio-button>
+                    </div>
+                </mat-card>
+               
+            </div>
+            <div fxLayoutAlign="start center">
+                <mat-card class="" [ngClass]="{'disabled':registerType=='With Limited KYC'}">
+                    <div fxLayoutAlign="space-between center">
+                        <span>With Full KYC</span>
+                        <mat-radio-button class="" value="With Full KYC"  > </mat-radio-button>
+                    </div>
+                </mat-card>
+            </div>
+        </mat-radio-group>
+        </div>
+        <div class="mb-4 fixed-btn" fxLayoutAlign="center center">
+            <button [disabled]="!registration.valid" class="btn-primary width-300 txt-18" type="submit">Next</button>
+        </div>
+    </form>
+    </div>
+</div>

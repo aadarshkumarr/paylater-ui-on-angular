@@ -1,0 +1,10 @@
+.convert_btn {
+    color: #255bd7;
+    background: rgba(37, 91, 215, 0.2);
+    -webkit-appearance: none;
+    border: 0;
+    padding: 4px 15px;
+}
+.plr-30 {
+    padding: 0 30px;
+}

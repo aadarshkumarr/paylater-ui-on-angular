@@ -1,0 +1,83 @@
+<div class="container-fluid">
+    <!-- <div class="content registraion-type p-b-20" fxLayout="column" fxLayoutAlign="space-between center">
+        <form class="w-100p" autocomplete="off" [formGroup]="eligibleLimit" (ngSubmit)="eligibleLimitSubmit()">
+        <div class="mt-5 w-100p" fxLayout="column" fxLayoutAlign="center start"> 
+            <div class="m-b-20 w-100p" fxLayout="column" fxLayoutAlign="center start ">
+                <p class="txt-18 bold">You're Eligible!</p>
+                <p class="txt-14">You are eligible for a limit upto</p>
+                <div class="m-t-10 amount" fxLayoutAlign="space-around center">
+                    <span>₹ {{limit}}</span>
+                </div>
+            </div> 
+            <mat-radio-group class="w-100p" formControlName="limitWithKYCorWithoutKyc">
+            <div fxLayoutAlign="start center">
+                <mat-card class="m-b-10" [ngClass]="{'disabled':limitWith=='With KYC'}">
+                    <div fxLayoutAlign="space-between center">
+                        <span>Limit ₹ 5,000<span class="badges">With Limited KYC</span></span>
+                        <mat-radio-button class="" value="Without KYC"> </mat-radio-button>
+                    </div>
+                </mat-card>
+               
+            </div>
+            <div fxLayoutAlign="start center">
+                <mat-card class="" [ngClass]="{'disabled':limitWith=='Without KYC'}">
+                    <div fxLayoutAlign="space-between center">
+                        <span>Limit ₹ 60,000<span class="badges">Full KYC</span></span>
+                        <mat-radio-button class="" value="With KYC" > </mat-radio-button>
+                    </div>
+                </mat-card>
+            </div>
+            </mat-radio-group>
+        </div>
+        <div class="mb-4 fixed-btn" fxLayoutAlign="center center">
+            <button [disabled]="!eligibleLimit.valid" class="btn-primary width-300 txt-18" type="submit">Next</button>
+        </div>
+    </form>
+    </div> -->
+
+
+    <div class="success-popup" fxLayout="column" fxLayoutAlign="center center">
+        <div class="m-b-40">
+            <svg xmlns="http://www.w3.org/2000/svg" width="134.427" height="167.663" viewBox="0 0 134.427 167.663">
+                <g data-name="4892636-02 1">
+                    <path d="M86.563 43.282A43.281 43.281 0 1 1 43.281 0a43.281 43.281 0 0 1 43.282 43.282z" transform="translate(37.5 81.1)" style="fill:#d3e0f4;opacity:.4"/>
+                    <path data-name="Path 216" d="m24.142 0 .138 1.861A37.418 37.418 0 0 1 22.136 15.6 38.005 38.005 0 0 1 4.219 36.632q-1.265.711-2.644 1.356L0 34.882A40.192 40.192 0 0 0 7.254 30.5a33.562 33.562 0 0 0 11.439-15.865A36.582 36.582 0 0 0 20.7 3.995L7.645 5.862l-.523-3.417z" transform="translate(89.443 70.835)" style="fill:#d6b116"/>
+                    <path data-name="Path 217" d="M1.4 36.81A38.007 38.007 0 0 0 19.319 15.8a37.386 37.386 0 0 0 2.144-13.733L21.325.206 22.779 0l.144 1.856a37.537 37.537 0 0 1-2.144 13.735A38.048 38.048 0 0 1 2.851 36.6c-.845.467-1.724.922-2.644 1.356L0 37.554c.483-.254.948-.494 1.4-.744z" transform="translate(90.851 70.862)" style="opacity:.1;fill:#2b61ab"/>
+                    <path data-name="Path 218" d="m33.54 29.064-.575 3.417q-1.517-.239-2.937-.556A39.075 39.075 0 0 1 6.587 16.8 38 38 0 0 1 .42 4.25L0 2.434 17.008 0l.523 3.423L4.466 5.289a37.475 37.475 0 0 0 5.121 9.618 34.554 34.554 0 0 0 15.7 11.99 40.906 40.906 0 0 0 8.248 2.167z" transform="translate(35.383 79.586)" style="fill:#d6b116"/>
+                    <path data-name="Path 219" d="M31.47 29.487A39.065 39.065 0 0 1 8.013 14.363 37.983 37.983 0 0 1 1.851 1.817L1.454 0 0 .211l.425 1.817a37.99 37.99 0 0 0 6.168 12.546A39.075 39.075 0 0 0 30.039 29.7q1.426.317 2.937.556l.075-.45a51.138 51.138 0 0 1-1.581-.319z" transform="translate(35.342 81.825)" style="fill:#fff;opacity:.1"/>
+                    <path data-name="Path 220" d="m39.271 21.3 2.822 18.458-39.3 5.634L0 26.914l1.006-1.789c12.071-6.19 12.9-17.952 12.726-22.536a17.419 17.419 0 0 0-.155-1.894L18.44 0a17.022 17.022 0 0 0 .42 1.856c1.212 4.444 5.535 15.463 18.933 18.007z" transform="translate(64.387 114.612)" style="fill:#f4cb1f"/>
+                    <path data-name="Rectangle 24" d="m76.856 135.516 39.3-5.623.354 2.314-39.3 5.623z" style="opacity:.1" transform="translate(-12.49 6)"/>
+                    <path data-name="Path 221" d="M3.1 24.425C15.169 18.235 16 6.473 15.824 1.889A17.317 17.317 0 0 0 15.669 0l-2.086.294a17.418 17.418 0 0 1 .155 1.895c.167 4.584-.673 16.352-12.726 22.536L0 26.514l2.828 18.469 2.081-.294-2.828-18.458z" transform="translate(64.346 115.017)" style="fill:#fff;opacity:.1"/>
+                    <path data-name="Path 223" d="m8.26 2.139-.575 3.417Q6.168 5.314 4.742 5A37.2 37.2 0 0 1 0 0a41.014 41.014 0 0 0 8.26 2.139z" transform="translate(60.662 106.511)" style="opacity:.1"/>
+                    <path data-name="Path 224" d="M0 4.384A40.347 40.347 0 0 0 7.248 0a35.878 35.878 0 0 1-3.035 6.14c-.839.467-1.724.922-2.638 1.356z" transform="translate(89.443 101.332)" style="opacity:.1"/>
+                    <path data-name="Path 226" d="M5.277 1.856a14.162 14.162 0 0 1-5.121.733A17.419 17.419 0 0 0 0 .695L4.857 0a18.83 18.83 0 0 0 .42 1.856z" transform="translate(77.941 114.612)" style="opacity:.1"/>
+                    <path data-name="Path 227" d="M0 7.206c3.972 25.369 18.365 44.288 32.235 42.3S54.2 25.4 50.41 0z" transform="translate(48.402 67.156)" style="fill:#f4cb1f"/>
+                    <path data-name="Path 228" d="M4.478 0 0 .639c3.972 25.369 18.365 44.288 32.235 42.3a14.232 14.232 0 0 0 2.207-.5C21.3 42.2 8.225 23.992 4.478 0z" transform="translate(48.413 73.724)" style="fill:#b19f57;opacity:.1"/>
+                    <path data-name="Rectangle 25" d="m84.219 141.681 26.73-3.825 1.018 6.645-26.73 3.825z" style="fill:#fff" transform="translate(-12.49 6)"/>
+                    <path data-name="Path 229" d="M1.391 4.551 26.872.906 26.734 0 0 3.823l1.017 6.667 1.259-.183z" transform="translate(71.721 143.87)" style="fill:#ddd;opacity:.1"/>
+                    <path data-name="Vector" d="M1.384 4.584a9.235 9.235 0 0 0 1.46.556 4.479 4.479 0 0 1 1.474 1.071 4.3 4.3 0 0 1 .9 1.554A4.2 4.2 0 0 1 5.4 9.539a4.24 4.24 0 0 1-.572 1.7h4.6a14.223 14.223 0 0 0-.109-4.606 4.922 4.922 0 0 0-.966-2.09 5.139 5.139 0 0 0-1.825-1.459 13.108 13.108 0 0 1-1.236-.472 2.373 2.373 0 0 1-1.03-1.118A2.272 2.272 0 0 1 4.143 0C4.143.078.935-.228.349.506c-.862 1.072.023 3.456 1.035 4.078z" transform="translate(71.015)" style="fill:#f4523d"/>
+                    <path data-name="Vector" d="M2.56 4.123a9.326 9.326 0 0 0 1.3-.339c2.064-.556 4.167.922 4.1 2.828l3.282-2.167a9.618 9.618 0 0 0-2.118-2.778A4.071 4.071 0 0 0 7.449.813 4.159 4.159 0 0 0 5.555.795a11.068 11.068 0 0 1-1.1.3A1.776 1.776 0 0 1 3.265.9 1.681 1.681 0 0 1 2.5 0C2.5.061.1 1.395.008 2.128-.13 3.161 1.56 4.223 2.56 4.123z" transform="translate(18.481 28.874)" style="fill:#89acb0"/>
+                    <path data-name="Vector" d="M3.886 2.048a6.983 6.983 0 0 0 .029 1.2 3.324 3.324 0 0 1-.337 1.362A3.431 3.431 0 0 1 2.7 5.727a3.57 3.57 0 0 1-1.263.685A3.651 3.651 0 0 1 0 6.549l1.437 3.205a12.358 12.358 0 0 0 3.409-1.539A3.98 3.98 0 0 0 6.1 6.881a3.83 3.83 0 0 0 .51-1.738c0-.339-.069-.678-.04-1.011a1.825 1.825 0 0 1 .519-1.065 1.936 1.936 0 0 1 1.079-.547C8.1 2.52 7.317.2 6.587.031 5.535-.224 4.029 1.148 3.886 2.048z" transform="translate(72.273 37.239)" style="fill:#5f5f9b"/>
+                    <path data-name="Vector" d="m4.409 6.038 3.57-.972a1.1 1.1 0 0 0 .575-.278C8.7 4.626 8.036 1.143 6.829.193 5.794-.6.172 1.265 0 2.1a5.432 5.432 0 0 1 4.144.422c1.167.793 1.456 2.749.265 3.516z" transform="translate(121.827 76.07)" style="fill:#575791"/>
+                    <path data-name="Vector" d="M0 3.445S4.024 3.5 4.472 8.89a3.315 3.315 0 0 1 3.616 0S7.616 1.322 2.5 0A10.669 10.669 0 0 1 0 3.445z" transform="translate(126.34 51.899)" style="fill:#edb111"/>
+                    <path data-name="Vector" d="M4.446 9.468S2.6 6.017 7.32 3.084A3.125 3.125 0 0 1 5.6 0S-1.083 3.978.153 8.945a11.375 11.375 0 0 1 4.294.522z" transform="translate(0 37.381)" style="fill:#edb111"/>
+                    <path data-name="Vector" d="M1.44 5.334A5.591 5.591 0 0 0 .147 6.912C-.376 8.2.6 9.562 1.5 10.629l1.724 2.017a1.745 1.745 0 0 0 .514.516 1.811 1.811 0 0 0 .687.268 1.667 1.667 0 0 0 .839-.3 9.209 9.209 0 0 0 2.4-2.1c-1.811-.861-3-3.028-2.3-4.851.207-.556.575-.995.793-1.511A7.939 7.939 0 0 0 6.637.85a.673.673 0 0 0-.031-.3.69.69 0 0 0-.159-.255.767.767 0 0 0-.391-.1A17.131 17.131 0 0 0 1.975.106a3.9 3.9 0 0 1 .745 2.711 3.952 3.952 0 0 1-1.28 2.517z" transform="translate(51.79 14.972)" style="fill:#89acb0"/>
+                    <path data-name="Vector" d="M4.725 5.446a4.1 4.1 0 0 0 1.357-.117c.862-.344 1.1-1.4 1.207-2.295.069-.556.144-1.111.213-1.7a1.075 1.075 0 0 0 .02-.467A1.091 1.091 0 0 0 7.34.434a1.02 1.02 0 0 0-.523-.25 6.237 6.237 0 0 0-2.1-.156 2.642 2.642 0 0 1-1.354 3.223c-.356.144-.741.194-1.1.317A5.818 5.818 0 0 0 .178 5.1a.432.432 0 0 0-.128.144.417.417 0 0 0-.05.18.451.451 0 0 0 .126.228 10.564 10.564 0 0 0 1.788 1.905 2.606 2.606 0 0 1 1-1.565 2.772 2.772 0 0 1 1.811-.546z" transform="translate(44.263 43.225)" style="fill:#89acb0"/>
+                    <path data-name="Vector" d="M2.579 3.667a5.2 5.2 0 0 0-1.724.606c-1 .733-.925 2.184-.747 3.389.109.761.224 1.522.333 2.284a1.453 1.453 0 0 0 .141.61 1.5 1.5 0 0 0 .387.5 1.45 1.45 0 0 0 .77.15 8.584 8.584 0 0 0 2.8-.506 3.543 3.543 0 0 1 .575-4.651c.408-.3.891-.5 1.316-.778a7.556 7.556 0 0 0 2.19-2.656.449.449 0 0 0 .123-.184.436.436 0 0 0 .019-.218.443.443 0 0 0-.09-.2.463.463 0 0 0-.178-.136A14.165 14.165 0 0 0 5.482 0a3.442 3.442 0 0 1-.743 2.357 3.662 3.662 0 0 1-2.16 1.31z" transform="translate(96.497 45.148)" style="fill:#89acb0"/>
+                    <path data-name="Vector" d="M3.583 7.234A9.31 9.31 0 0 1 6.4 4.861a9.624 9.624 0 0 1 3.541-1.127L9.268 0C7.285.333.939 1.584.071 3.684c-.546 1.389 2.179 5.25 3.512 3.55z" transform="translate(17.969 91.326)" style="fill:#5f5f9b"/>
+                    <path data-name="Vector" d="M.626 3.517a7.458 7.458 0 0 1 2.619 1.27 7.181 7.181 0 0 1 1.9 2.158l2.61-1.584C6.915 4.067 4.087-.028 2.259 0 1.04.022-1.052 3.084.626 3.517z" transform="translate(116.303 27.341)" style="fill:#f4523d"/>
+                    <path data-name="Vector" d="M.334 2.66a7.22 7.22 0 0 1 1.881 2.174 6.984 6.984 0 0 1 .861 2.71l3.046-.45C5.881 5.582 4.973.743 3.248.065 2.145-.385-1.028 1.621.334 2.66z" transform="translate(17.983 65.625)" style="fill:#89acb0"/>
+                    <path data-name="Vector" d="M.508 2.6a5.36 5.36 0 0 1 1.935.777A5.17 5.17 0 0 1 3.91 4.82l1.782-1.256C5.02 2.681 2.818-.1 1.491 0 .594.1-.74 2.392.508 2.6z" transform="translate(90.32 22.943)" style="fill:#f4523d"/>
+                </g>
+            </svg>
+            
+        </div>
+        <div class="m-b-20 text-center" fxLayoutAlign="center center">
+            <p class="congrats-msg w-60p">You are eligible for a limit upto <span class="link">₹ {{limit}}</span> </p>
+        </div>
+        <div class="mb-4 fixed-btn" fxLayoutAlign="center center">
+            <button  class="btn-primary width-300 txt-18" type="submit" (click)="eligibleLimitSubmit()">Accept & Proceed</button>
+        </div>
+    </div>
+
+</div>

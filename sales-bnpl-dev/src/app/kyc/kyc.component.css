@@ -1,0 +1,31 @@
+.mat-card {
+    padding-bottom: 40px;
+}
+strong {
+    color: #465565;
+}
+.image-name {
+    font-size: 12px;
+    /* max-width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 150px;
+    overflow: hidden; */
+    color: #191717;
+    font-weight: 500;
+}
+.success-popup {
+    background: #ffffff;
+    min-width: 24vw;
+}
+.congrats-msg {
+    font-size: 18px;
+    color: #434343;
+    font-weight: 500;
+}
+.link {
+    color: #255bd7;
+}
+.plr-30 {
+    padding: 0 30px !important;
+}

@@ -1,0 +1,41 @@
+.buy-now {
+    position: relative;
+    bottom: 118px;
+    left: 40px;
+    background-color: #edc01e;
+    color: #fff;
+    font-weight: 700;
+    font-size: 26px;
+    width: 88%;
+    padding: 15px 15px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+.bottomsheet-wrap h4{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.pay-type {
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.pay-type:last-child {
+    border-bottom: 0;
+}
+.pay-type strong {
+    color: #318908;
+}
+.yellow-btn a {
+    background: #e6b300;
+    height: 43px;
+    border-radius: 6px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 22px;
+}

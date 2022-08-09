@@ -1,0 +1,18 @@
+.getsarted {
+  background: #0566ff;
+}
+h3 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 40px 20px;
+}
+.img-wrap {
+  /* height: 400px; */
+  padding-bottom: 60px;
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #255bd7;
+}

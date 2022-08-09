@@ -1,0 +1,15 @@
+.success-popup {
+    background: #ffffff;
+    min-width: 24vw;
+}
+.congrats-msg {
+    font-size: 18px;
+    color: #434343;
+    font-weight: 500;
+}
+.link {
+    color: #255bd7;
+}
+.plr-30 {
+    padding: 0 30px !important;
+}

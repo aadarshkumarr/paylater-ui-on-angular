@@ -1,0 +1,13 @@
+img {
+    max-width: 60px;
+}
+li {
+    margin-right: 20px;
+    cursor: pointer;
+}
+h4 {
+    font-weight: 700;
+}
+.plr-30 {
+    padding: 0 30px;
+}

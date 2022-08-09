@@ -1,0 +1,32 @@
+<ng-template #congratulation>
+    <!-- <mat-icon class="close-icon" color="dark" mat-dialog-close>close</mat-icon> -->
+    <!-- <h2 mat-dialog-title class="mb-0">Title</h2> -->
+     <mat-dialog-content class="mat-typography">
+       <div class="row">
+       
+        Your credit card request has been<br> received. Our team will connect with you shortly.      </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+     
+        <button mat-button [mat-dialog-close]="true" cdkFocusInitial >Okay</button>
+
+    </mat-dialog-actions>
+    </ng-template>
+
+<div>
+    <strong>OTP Verification</strong>
+    <p class="m-t-10">Enter one time Password <br> sent to +91 {{this.service.journyInfo.mobileNumber}} <a href="javascript:void(0)"
+            (click)="relogin()">Edit</a></p>
+    <div class="form-group m-t-20 m-b-20">
+        <ng-otp-input (onInputChange)="onOtpChange($event)" #ngOtpInput [config]="{length:6}"></ng-otp-input>
+        <small *ngIf="timerr">OTP resend in <span class="text-1">{{counter | timeFormate}}</span>seconds</small>
+        <small style="cursor: pointer;" *ngIf="resend_display" (click)="resendOtp()">Resend OTP</small>
+    </div>
+    <p class="error">{{errorMsg}}</p>
+    <div fxLayoutAlign="end center">
+        <button class="btn-primary" type="button" [disabled]="verifyDisabled"  (click)="verify(congratulation)">
+            Verify</button>
+    </div>
+    
+
+</div>

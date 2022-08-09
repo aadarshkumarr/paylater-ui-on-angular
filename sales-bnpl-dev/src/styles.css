@@ -1,0 +1,220 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    height: 100%;
+    color: #434343 !important;
+    overflow-x: hidden;
+ }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+dl, ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.content {
+    height: calc(100% - 44px);
+    margin: 0 auto;
+    max-width: 400px;
+}
+strong {
+    color: #465565;
+}
+button {
+    cursor: pointer;
+}
+/* common classes  */
+.txt-12 {
+    font-size: 12px;
+}
+.txt-14 {
+    font-size: 14px;
+}
+.txt-16 {
+    font-size: 16px;
+}
+.txt-18 {
+    font-size: 18px;
+}
+.cursor {
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: 700;
+}
+.semi-bold {
+    font-weight: 500;
+}
+.disabled {
+    opacity: 0.4;
+    /* pointer-events: none; */
+}
+.w-55p {
+    width: 55%;
+}
+.w-60p {
+    width: 60%;
+}
+.width-70p {
+    width: 70%;
+}
+.w-100p {
+    width: 100%;
+}
+.width-200 {
+    width: 200px;
+}
+.width-300 {
+    width: 300px;
+}
+.width-320 {
+    width: 320px;
+}
+.link {
+    color: #0566ff;
+    cursor: pointer;
+}
+.badges {
+    background-color: #0566ff;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 2px 6px;
+    margin-left: 12px;
+    border-radius: 4px;
+}
+.approve {
+    color: #107a0e;
+}
+.error {
+    color: #b92e2e;
+}
+.m-r-10 {
+    margin-right: 10px;
+}
+.m-l-10 {
+    margin-left: 10px;
+}
+.m-t-10 {
+    margin-top: 10px !important;
+}
+.m-b-10 {
+    margin-bottom: 10px;
+}
+.m-r-20 {
+    margin-right: 20px;
+}
+.m-l-20 {
+    margin-left: 20px;
+}
+.m-t-20 {
+    margin-top: 20px !important;
+}
+.m-t-40 {
+    margin-top: 40px;
+}
+.m-b-20 {
+    margin-bottom: 20px;
+}
+.m-b-40 {
+    margin-bottom: 40px !important;
+}
+.p-10 {
+    padding: 10px;
+}
+.p-r-10 {
+    padding-right: 10px;
+}
+.p-l-10 {
+    padding-left: 10px;
+}
+.p-t-10 {
+    padding-top: 10px;
+}
+.p-b-10 {
+    padding-bottom: 10px;
+}
+.p-r-20 {
+    padding-right: 20px;
+}
+.p-l-20 {
+    padding-left: 20px;
+}
+.p-t-20 {
+    padding-top: 20px;
+}
+.p-b-20 {
+    padding-bottom: 20px;
+}
+.p-b-25 {
+    padding-bottom: 25px;
+}
+/* material input  */
+/* .mat-form-field {
+   min-width: 298px;
+} */
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: #f6f6f6;
+}
+.login-wrap .mat-form-field-flex  {
+    width: 320px;
+}
+.login-wrap .mat-form-field-wrapper {
+    padding-bottom: 0;
+}
+
+.btn-primary {
+    background-color: #0566ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+}
+.btn-border {
+    background-color: #ffffff;
+    border: 1px solid #0566ff;
+    color: #0566ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    height: 42px;
+    padding: 0 15px;
+}
+.fixed-btn {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+/* login */
+.login-input .mat-form-field-wrapper {
+    padding-bottom: 0 !important;
+}
+.login .mat-form-field-appearance-outline .mat-form-field-prefix {
+    top: -5px !important;
+}
+
+.registraion-type .mat-card  {
+    width: 100%;
+}
+
+.registraion-type .amount  {
+    background-color: #f6f6f6;
+    color: #494949;
+    font-size: 20px;
+    font-weight: 700;
+    min-width: 120px;
+    height: 46px;
+}
+.owl-theme .owl-nav [class*=owl-] {
+    display: none;
+}
+:focus-visible { 
+    border: none;
+}
+:focus {
+    border: none;
+}

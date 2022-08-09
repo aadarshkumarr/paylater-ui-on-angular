@@ -1,0 +1,99 @@
+<ng-template #termAndCondition>
+    <!-- <mat-icon class="close-icon" color="dark" mat-dialog-close>close</mat-icon> -->
+    <!-- <h2 mat-dialog-title class="mb-0">Title</h2> -->
+    <p class="small">By clicking on the tab/button/ checkbox of “Decimal Buy” or “Order with Decimal” or “Decimal Pay in 3” or any other button/checkbox of similar nature, (i) you confirm that eligible under Applicable Law to contract with Decimal, (ii) you consent to conduct transactions, accept the terms and conditions of this Agreement and the Privacy Policy as displayed on the Website and (iii) you consent to receive communications, notices and information from us through post or other physical medium or electronically (whether through SMS, emails, phone calls and automated phone calls). Electronic communications shall be deemed to have been received by you when we send the electronic communication to the email address / mobile number / details provided by You during the sign-up process as per our records, or when we post the electronic communication on the Website.</p>
+    <mat-dialog-content class="mat-typography">
+       <div class="row"></div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+     
+      <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Cancel</button>
+
+    </mat-dialog-actions>
+    
+</ng-template>
+<div class="content login-wrap" fxLayout="column" fxLayoutAlign="space-between center">
+    <form class="w-100p" autocomplete="off" [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+    <div class="login mt-5 w-100p" fxLayout="column" fxLayoutAlign="center center"> 
+        <div class="m-b-20" fxLayoutAlign="start center">
+            <strong class="txt-18">Enter Your mobile number to get started</strong>
+        </div>
+        <div>
+            <mat-form-field class="w-100p login-input" fxLayoutAlign="start center" appearance="outline">
+                <mat-label>Mobile Number</mat-label>
+                <span matPrefix class="country-code m-r-10">+91</span>
+                <input class="w-100p" type="tel" matInput placeholder="666-555-1234" maxlength="10" formControlName="mobile">
+              </mat-form-field>
+
+              <div class="error m-b-10" *ngIf="loginForm.controls['mobile'].errors && (loginForm.controls['mobile'].dirty || loginForm.controls['mobile'].touched)" >
+            
+                <span class="txt-12" *ngIf="loginForm.controls['mobile'].errors['required']">Mobile no is required</span>
+                <span class="txt-12"  *ngIf="loginForm.controls['mobile'].errors['minlength']">Mobile number must be 10 digit</span>
+                <span class="txt-12"  *ngIf="loginForm.controls['mobile'].errors['pattern'] && !loginForm.controls['mobile'].errors['minlength']">Invalid mobile number</span>
+    
+            </div> 
+        </div>
+       
+        <div fxLayoutAlign="start center">
+            <mat-checkbox class="m-r-10" formControlName="termAndCondition"></mat-checkbox>
+               <span>I hereby accept the</span><span class="link m-r-10" (click)="matDialog.open(termAndCondition)">Terms & Condition</span>
+                <svg  xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#0566ff">
+                    <path d="M0 0h24v24H0V0z" fill="none"/>
+                    <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2
+                     2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                </svg>
+           
+               
+        </div>
+        <div class="error txt-12 m-t-10" fxLayoutAlign="end center" *ngIf="loginForm.controls['termAndCondition'].errors && (loginForm.controls['termAndCondition'].dirty || loginForm.controls['termAndCondition'].touched)" >
+            <span class="msg error m-l-10" *ngIf="loginForm.controls['termAndCondition'].errors?.['required']">Terms & Condition is required</span>
+        </div>
+
+        <div class="m-t-10" >
+            <mat-form-field class="w-100p" appearance="outline">
+                <mat-label>Enter PAN</mat-label>
+                <input type="text" #input oninput="this.value = this.value.toUpperCase()" maxlength="10" matInput placeholder="Enter Your PAN" formControlName="pan">
+            </mat-form-field>
+        </div>
+        <div class="m-t-10">
+            <mat-form-field class="w-100p" appearance="outline">
+                <mat-label>Enter Full Name</mat-label>
+                <input type="text" matInput placeholder="Enter Your Name" formControlName="name">
+            </mat-form-field>
+        </div>
+
+        <div class="m-t-10">
+            <mat-form-field appearance="outline" class="w-100p">
+                <mat-label>DOB</mat-label>
+                <input matInput  formControlName="dob">
+                <mat-datepicker-toggle matSuffix  ></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+        </div>
+
+        <div class="w-100p width-320 m-t-10">
+            <mat-card class="m-b-10" >
+                <div fxLayoutAlign="space-between center">
+                    <span>With Limited KYC</span>
+                    <mat-radio-button class="" value="With Limited KYC"> </mat-radio-button>
+                </div>
+            </mat-card>
+           
+        </div>
+        <div class="w-100p width-320 m-t-10">
+            <mat-card class="" >
+                <div fxLayoutAlign="space-between center">
+                    <span>With Full KYC</span>
+                    <mat-radio-button class="" value="With Full KYC"  > </mat-radio-button>
+                </div>
+            </mat-card>
+        </div>
+        
+    </div>
+    <div class="mb-4" fxLayoutAlign="center center">
+        <button type="submit" class="btn-primary width-300 txt-18">Get OTP</button>
+    </div>
+</form>
+
+
+</div>
